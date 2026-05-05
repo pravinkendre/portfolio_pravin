@@ -1,46 +1,100 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     background-color: #f0f0f0;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #222;
+    background: linear-gradient(to right, #222, #444);
     color: white;
     text-align: center;
-    padding: 30px 20px; /* increased */
+    padding: 40px 20px;
 }
 
 /* Navigation */
 nav {
     background-color: #444;
     text-align: center;
-    padding: 15px; /* increased */
+    padding: 15px;
 }
 
 nav a {
     color: white;
-    margin: 0 20px; /* more space between links */
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #00bcd4;
+    color: black;
 }
 
 /* Sections */
 section {
-    padding: 60px 40px;  /* BIG improvement */
-    margin-bottom: 20px; /* space between sections */
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Skills */
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-container span {
+    background-color: #222;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills-container span:hover {
+    background-color: #00bcd4;
+    color: black;
+}
+
+/* Certifications */
+.cert {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 5px solid #00bcd4;
+    border-radius: 5px;
 }
 
 /* Projects */
 .project {
     background: white;
-    margin: 25px 0; /* more vertical spacing */
-    padding: 20px; /* more inner spacing */
+    margin: 25px 0;
+    padding: 20px;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
-/* Headings spacing */
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Headings */
 h2 {
     margin-bottom: 20px;
 }
@@ -52,4 +106,16 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
 }
